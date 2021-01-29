@@ -31,8 +31,10 @@ def validatePassword(password):
 
 def sumUpToN(num):
     val = 0
-    for i in range(1, num+1):
-        val += i
+
+    if num > 1:
+        for i in range(1, num+1):
+            val += i
 
     return val 
 
