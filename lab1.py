@@ -29,6 +29,13 @@ def validatePassword(password):
     
     return False
 
+def sumUpToN(num):
+    val = 0
+    for i in range(1, num+1):
+        val += i
+
+    return val 
+
 if __name__ == "__main__":
     # Part 1
     hello()
@@ -39,4 +46,6 @@ if __name__ == "__main__":
     print(validatePassword(password))
     print("\n")
                 
-
+    # Part 3
+    sum = sumUpToN(14)
+    print(sum)
