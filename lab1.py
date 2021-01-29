@@ -8,24 +8,17 @@ def hello():
 
 def validatePassword(password):
     alnum, nums = 0, 0
-    
-    if len(password) >= 8:
+
+    if len(password) >= 8 and password.isalnum():
         for val in password:
-            if val.isalnum():
-                try:
-                    if isinstance(int(val), int):
-                        nums += 1
-                except:
-                    pass
-            else:
-                print("[ERROR] The password can only have alphanumeric values") 
-                continue
+            try:
+                if isinstance(int(val), int):
+                    nums += 1
+            except:
+                pass
+        
         if nums >= 2:
             return True
-        else:
-            print("[ERROR] The password must have more than 2 numbers.")
-    else:
-        print("[ERROR] Password must have at least 8 letters")
     
     return False
 
@@ -44,7 +37,7 @@ if __name__ == "__main__":
     print("\n")
 
     # Part 2
-    password = "GreetingsFe11owKids"
+    password = "GreetingsFe1owKids"
     print(validatePassword(password))
     print("\n")
                 
