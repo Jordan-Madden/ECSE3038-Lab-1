@@ -28,6 +28,8 @@ def sumUpToN(num):
     if num > 1:
         for i in range(1, num+1):
             val += i
+    else:
+        val = -1
 
     return val 
 
@@ -37,7 +39,7 @@ if __name__ == "__main__":
     print("\n")
 
     # Part 2
-    password = "GreetingsFe1owKids"
+    password = "GreetingsFe11owKids"
     print(validatePassword(password))
     print("\n")
                 
